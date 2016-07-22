@@ -20,7 +20,7 @@ public class ExecleTemplateExport {
 	@Test
 	public void export(){
 		String[] addresss={"成都","贵阳","北京","湖南"};
-		char[] sexs={'男','女'};
+		String[] sexs={"男","女"};
 		List<Employee> employees=new ArrayList<Employee>();
 		Employee employee=null;
 		Random random=new Random();
@@ -46,7 +46,7 @@ public class ExecleTemplateExport {
 			//采用实体类加入注解的方式用于导出集合数据
 //			Workbook workbook = ExcelExportUtil.exportExcel(params,Employee.class,employees, map);
 			Workbook workbook = ExcelExportUtil.exportExcel(params, map);
-			FileOutputStream fos = new FileOutputStream("tt.xls");
+			FileOutputStream fos = new FileOutputStream("template/tt.xls");
 			workbook.write(fos);
 			fos.close();
 		} catch (Exception e) {

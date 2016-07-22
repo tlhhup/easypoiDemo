@@ -54,4 +54,11 @@ EasyPoi 模板 表达式支持
 		1. {{--->用于表示循环迭代数据开始
         2. }}--->用于表示结束
 
-
+2. 导入：
+	1. 使用ExcelImportUtil进行导入：通过实体类添加注解的方式，在导入数据中表头需要对应实体类注解的name属性
+	2. 设置导入参数的起始行无效，需要通过设置表头的位置来标识读取数据的位置
+				
+			ImportParams params=new ImportParams();
+			//设置表头的位置
+			params.setTitleRows(1);
+		
